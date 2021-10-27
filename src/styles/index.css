@@ -51,50 +51,52 @@ body {
 }
 
 
-html {
-  box-sizing: border-box;
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  padding: 20px;
+  grid-gap: 40px;
 }
-
-
-.cards {
-  margin: 80px auto;
-  max-width: 960px;
-  text-align: center;
+.card{
+  background-color: #1c1b29;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
-
-.card {
-  background: 2f3033;
-  display: inline-block;
-  margin: 8px;
-  max-width: 300px;
-  perspective: 1000;
+.container{
   position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  width: 300px;
-  z-index: 1;
+  clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+}
+img{
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+.container:after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
 }
 
-.card__image {
-    max-width: 300px;
-  }
-  
-.card__image-holder {
-    background: rgba(0,0,0,0.1);
-    height: 0;
-    padding-bottom: 75%;
-  }
-
-div.card-title {
-    font-family: "Nunito", sans-serif;
-    background: #2f3033;
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.details{
+  padding: 20px 10px;
 }
-
+.details>h3{
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.details>p{
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
 .footer{
   position: fixed;
   bottom:0;

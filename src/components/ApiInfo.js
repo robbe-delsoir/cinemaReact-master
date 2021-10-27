@@ -39,13 +39,14 @@ export class ApiInfo extends React.Component {
         <div className = "App">
               {
                 items.map((item) => ( 
-                <div classname="cards" key = { item.id } >
-                    <div className="card">
-                        <div className="card__image-holder">
-                            <img class="card__image" src={image} alt="movie image"></img>
+                <div class="cards" key = { item.id } >
+                    <div class="card card1">
+                        <div class="container">
+                            <img src={image} alt="movie image"></img>
                         </div>
-                        <div className="card-title">
+                        <div class="details">
                             <h1>{item.original_title }</h1>
+                            <p>{item.overview }</p>
                         </div>
                     </div>
                 </div>
@@ -55,6 +56,7 @@ export class ApiInfo extends React.Component {
     );
 }
 }
+
 
 
 
