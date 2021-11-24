@@ -1,5 +1,4 @@
 import React from "react";
-import image from "./star.jpg"
 
 export class ApiInfo extends React.Component {
     
@@ -31,7 +30,9 @@ export class ApiInfo extends React.Component {
     
     render() {
         
+        
         const { DataisLoaded, items } = this.state;
+        let fullpath = `https://image.tmdb.org/t/p/w500`;
         if (!DataisLoaded) return <div>
             <h1> Please wait some time.... </h1> </div> ;
    
@@ -39,10 +40,13 @@ export class ApiInfo extends React.Component {
         <div className = "App">
               {
                 items.map((item) => ( 
+                
                 <div class="cards" key = { item.id } >
+                    
                     <div class="card card1">
                         <div class="container">
-                            <img src={image} alt="movie image"></img>
+                            
+                            <img src= {fullpath+item.poster_path}  alt="movie image"></img> 
                         </div>
                         <div class="details">
                             <h1>{item.original_title }</h1>

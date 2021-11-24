@@ -1,3 +1,5 @@
+
+
 html,
 body {
  height: 100%;
@@ -50,27 +52,30 @@ body {
   background-color: #512e9d;
 }
 
-
 .cards{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  margin: auto;
+  display:inline-block;
   padding: 20px;
-  grid-gap: 40px;
 }
+
+
 .card{
+  max-width: 31rem;
   background-color: #1c1b29;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
+
 .container{
   position: relative;
   clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
 }
+
 img{
-  width: 100%;
   display: block;
   border-radius: 20px 20px 0 0;
 }
+
 .container:after{
   content: "";
   height: 100%;
@@ -97,6 +102,7 @@ img{
   line-height: 30px;
   font-weight: 400;
 }
+
 .footer{
   position: fixed;
   bottom:0;
